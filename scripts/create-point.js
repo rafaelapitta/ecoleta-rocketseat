@@ -49,3 +49,24 @@ function getCities(event) {
 document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
+
+
+//Itens de Coleta
+
+const itensToCollect = document.querySelectorAll(".itens-grid li")
+
+for (const item of itensToCollect) {
+    item.addEventListener("click", handSelectedItem)
+}
+
+let selectedItems = []
+
+function handSelectedItem(event) {
+    const itemLi = event.target
+
+// add or remove classes
+    itemLi.classList.toggle("selected")
+
+    const itemId = itemLi.dataset.id 
+
+}
