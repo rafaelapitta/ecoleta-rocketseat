@@ -59,6 +59,7 @@ for (const item of itensToCollect) {
     item.addEventListener("click", handSelectedItem)
 }
 
+const collectedItems = document.querySelector("input[name=items]")
 let selectedItems = []
 
 function handSelectedItem(event) {
@@ -68,5 +69,30 @@ function handSelectedItem(event) {
     itemLi.classList.toggle("selected")
 
     const itemId = itemLi.dataset.id 
+
+    const alredySelected = selectedItems.findIndex(function(item) {
+        const itemFound = item ==itemId
+        return itemFound
+    })
+
+
+
+
+    //if selected, remove from selection 
+
+if ( alredySelected >=0 ) {
+        
+    const filteredItems = selectedItems.filter ( item => {
+        const itemDifferent = item != itemId
+        return itemDifferent
+    })
+
+        selectedItems = filteredItems
+} else {
+    //if not selected, select
+    selectedItems.push(itemId)
+}
+
+collectedItems.value = selectedItems
 
 }
