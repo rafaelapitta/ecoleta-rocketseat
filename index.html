@@ -23,22 +23,22 @@
             <main>
         <h1>Seu marketplace de coleta de resíduos</h1>
         <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-        <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
+        <a id="button-search" href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
             </main>
 
         </div>
     </div>
    
-    <div id="modal">
+    <div id="modal" class="hide">
         <div class="content">
             <div class="header">
-                <h1>Pontos de Coleta</h1>
+                <h1>Pesquise pontos de coleta</h1>
                 <a href="">Fechar</a>
             </div>
             <form action="">
                 <label for="search">Busque por cidade</label>
                 <div class="search field">
-                    <input type="text" name="search" placeholder="Digite a cidade">
+                    <input type="text" name="search" placeholder="Pesquise por cidade">
                     <button>
                         <img src="/img/search.svg" alt="buscar">
                     </button>
@@ -48,5 +48,7 @@
 
     </div>
     
+
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
